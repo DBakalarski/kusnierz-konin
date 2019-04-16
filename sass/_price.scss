@@ -1,5 +1,6 @@
 .price {
     height: 100vh;
+    padding-right: 220px;
     background-color: #fff;
     color: $font-color-dark;
     counter-reset: price;
@@ -83,9 +84,9 @@
 
             &::before {
                 counter-increment: price;
-                content: counter(price);
+                content: counter(price, decimal-leading-zero);
                 position: absolute;
-                left: -19px;
+                left: -28px;
                 bottom: -14px;
                 font-size: 21px;
             }

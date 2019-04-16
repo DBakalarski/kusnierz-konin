@@ -13,7 +13,6 @@ body {
 .container {
   max-width: 1330px;
   margin: 0 auto;
-  margin-right: 220px;
 }
 
 /* VARIABLES */
@@ -216,6 +215,7 @@ nav span {
 
 .about {
   height: 100vh;
+  padding-right: 220px;
   background-color: #2c2626;
   position: relative;
   overflow: hidden;
@@ -264,6 +264,7 @@ nav span {
 }
 
 .services {
+  padding-right: 220px;
   padding-top: 15px;
   height: 100vh;
   background-color: #e9eff1;
@@ -390,6 +391,7 @@ nav span {
 
 .price {
   height: 100vh;
+  padding-right: 220px;
   background-color: #fff;
   color: #282121;
   counter-reset: price;
@@ -497,9 +499,9 @@ nav span {
 
 .price .tabcontent-price .single-price::before {
   counter-increment: price;
-  content: counter(price);
+  content: counter(price, decimal-leading-zero);
   position: absolute;
-  left: -19px;
+  left: -28px;
   bottom: -14px;
   font-size: 21px;
 }
