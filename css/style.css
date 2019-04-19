@@ -505,4 +505,9 @@ nav span {
   bottom: -14px;
   font-size: 21px;
 }
+
+.gallery {
+  height: 100vh;
+  background-color: lightblue;
+}
 /*# sourceMappingURL=style.css.map */
