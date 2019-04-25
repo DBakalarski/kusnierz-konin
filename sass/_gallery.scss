@@ -1,4 +1,35 @@
 .gallery {
     height: 100vh;
-    background-color: lightblue;
+    //background-color: lightblue;
+    padding-right: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-elements {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .gallery-image {
+        width: 10vw;
+
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 10vw;
+            display: block;
+            padding: 5px;
+            cursor: pointer;
+            //filter: sepia(100%);
+            transition: .2s;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+                //filter: sepia(0%);
+            }
+        }
+
+    }
 }
