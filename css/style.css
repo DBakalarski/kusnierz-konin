@@ -548,4 +548,124 @@ nav span {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
+
+.contact {
+  height: 100vh;
+  padding-right: 220px;
+  background-color: lightgoldenrodyellow;
+  color: #382d2f;
+}
+
+.contact .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact .contact-form {
+  width: 20vw;
+  text-align: center;
+}
+
+.contact .contact-form .main-header {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.contact .contact-form .second-header {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.contact .contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contact-form form .group {
+  position: relative;
+  margin: 25px 0;
+}
+
+.contact .contact-form form textarea {
+  resize: none;
+}
+
+.contact .contact-form form input,
+.contact .contact-form form textarea {
+  background: none;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #D7D6D6;
+}
+
+.contact .contact-form form input:focus,
+.contact .contact-form form textarea:focus {
+  outline: none;
+}
+
+.contact .contact-form form input:focus ~ label,
+.contact .contact-form form input:valid ~ label,
+.contact .contact-form form textarea:focus ~ label,
+.contact .contact-form form textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #2c2626;
+}
+
+.contact .contact-form form input:focus ~ .bar:before,
+.contact .contact-form form textarea:focus ~ .bar:before {
+  width: 320px;
+}
+
+.contact .contact-form form label {
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-form form .bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+
+.contact .contact-form form .bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #2c2626;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  left: 0%;
+}
+
+.contact .contact-form form .submit-button {
+  color: #D7D6D6;
+  background-color: #382d2f;
+  cursor: pointer;
+  padding: 13px 0;
+}
+
+.contact .contact-details {
+  min-width: 30vw;
+}
 /*# sourceMappingURL=style.css.map */
