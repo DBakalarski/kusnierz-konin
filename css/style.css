@@ -512,9 +512,26 @@ nav span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px solid red;
+}
+
+.gallery .name-gallery {
+  font-size: 40px;
+}
+
+.gallery hr {
+  width: 70%;
+  margin: 0 auto;
+  border-color: #282121;
 }
 
 .gallery-elements {
@@ -552,8 +569,11 @@ nav span {
 .contact {
   height: 100vh;
   padding-right: 220px;
-  background-color: lightgoldenrodyellow;
+  background: radial-gradient(#f2ebd0, #94837c);
   color: #382d2f;
+  overflow: hidden;
+  position: relative;
+  padding-top: 20px;
 }
 
 .contact .contact-container {
@@ -565,7 +585,7 @@ nav span {
 }
 
 .contact .contact-form {
-  width: 20vw;
+  width: 30vw;
   text-align: center;
 }
 
@@ -587,6 +607,9 @@ nav span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact .contact-form form .group {
@@ -604,7 +627,7 @@ nav span {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 320px;
+  width: 20vw;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #D7D6D6;
@@ -626,7 +649,7 @@ nav span {
 
 .contact .contact-form form input:focus ~ .bar:before,
 .contact .contact-form form textarea:focus ~ .bar:before {
-  width: 320px;
+  width: 20vw;
 }
 
 .contact .contact-form form label {
@@ -643,7 +666,7 @@ nav span {
 .contact .contact-form form .bar {
   position: relative;
   display: block;
-  width: 320px;
+  width: 20vw;
 }
 
 .contact .contact-form form .bar:before {
@@ -667,5 +690,51 @@ nav span {
 
 .contact .contact-details {
   min-width: 30vw;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact .contact-details .name h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contact .contact-details .name h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.contact .contact-details .open {
+  font-size: 20px;
+}
+
+.contact .contact-details .open span {
+  font-weight: 600;
+}
+
+.contact .contact-details .place {
+  font-size: 20px;
+}
+
+.contact .contact-details img {
+  width: 100px;
+}
+
+.contact .contact-image {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding-right: 220px;
+  top: 46%;
+  width: 50vw;
 }
 /*# sourceMappingURL=style.css.map */

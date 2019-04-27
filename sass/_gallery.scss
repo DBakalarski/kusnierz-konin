@@ -3,7 +3,20 @@
     //background-color: lightblue;
     padding-right: 220px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    border: 1px solid red;
+
+    .name-gallery {
+        font-size: 40px;
+    }
+
+    hr {
+        width: 70%;
+        margin: 0 auto;
+        border-color: $font-color-dark;
+    }
 }
 
 .gallery-elements {

@@ -1,8 +1,11 @@
 .contact {
     height: 100vh;
     padding-right: 220px;
-    background-color: lightgoldenrodyellow;
+    background: radial-gradient(#f2ebd0, #94837c);
     color: $background-color-dark;
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
 
     .contact-container {
         display: flex;
@@ -10,7 +13,7 @@
     }
 
     .contact-form {
-        width: 20vw;
+        width: 30vw;
         text-align: center;
 
         .main-header {
@@ -26,6 +29,7 @@
         form {
             display: flex;
             flex-direction: column;
+            align-items: center;
 
             .group {
                 position: relative;
@@ -43,7 +47,7 @@
                 font-size: 18px;
                 padding: 10px 10px 10px 5px;
                 display: block;
-                width: 320px;
+                width: 20vw;
                 border: none;
                 border-radius: 0;
                 border-bottom: 1px solid $font-color-light;
@@ -60,7 +64,7 @@
                 }
 
                 &:focus~.bar:before {
-                    width: 320px;
+                    width: 20vw;
                 }
             }
 
@@ -78,7 +82,7 @@
             .bar {
                 position: relative;
                 display: block;
-                width: 320px;
+                width: 20vw;
 
                 &:before {
                     content: '';
@@ -103,6 +107,47 @@
 
     .contact-details {
         min-width: 30vw;
-        //border: 1px solid black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .name {
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            h3 {
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+
+        .open {
+            font-size: 20px;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .place {
+            font-size: 20px;
+        }
+
+        img {
+            width: 100px;
+
+        }
+    }
+
+    .contact-image {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding-right: 220px;
+        top: 46%;
+        width: 50vw;
     }
 }
