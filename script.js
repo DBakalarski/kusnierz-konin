@@ -49,3 +49,27 @@ function autoClick() {
 }
 
 autoClick();
+
+/************* NAV SCROLL AND ANIMATE *****************/
+
+// $('#jumbotron').on('click', function () {
+//     $('body, html').animate({
+//         scrollTop: $('.about').offset().top
+//     })
+// })
+
+
+function displayDate() {
+    window.scroll({
+        top: 1000,
+        left: 0,
+        behavior: 'smooth'
+    })
+}
+
+function scrollFunction() {
+    document.querySelector('.about').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+document.querySelector('#about').addEventListener("click", scrollFunction)
