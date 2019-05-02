@@ -20,12 +20,12 @@
     <nav>
         <img src="./images/logo--white.png">
         <ul>
-            <li id="jumbotron">Strona główna</li>
-            <li id="about">Czym się zajmujemy?</li>
-            <li>Nasze usługi</li>
-            <li>Galeria</li>
-            <li>Ceniik</li>
-            <li>Kontakt</li>
+            <li class="jumbotronToScroll">Strona główna</li>
+            <li class="aboutToScroll">Czym się zajmujemy?</li>
+            <li class="servicesToScroll">Nasze usługi</li>
+            <li class="galleryToScroll">Galeria</li>
+            <li class="priceToScroll">Ceniik</li>
+            <li class="contactToScroll">Kontakt</li>
         </ul>
         <span>
             <i class="fas fa-chevron-up"></i>
@@ -33,7 +33,7 @@
             <p>na górę</p>
         </span>
     </nav>
-    <section class="jumbotron">
+    <section id="jumbotronToScroll" class="jumbotron">
         <img src="./images/logo-main.png" alt="" class="main-logo">
         <div class="owl-carousel">
             <div> <img src="./images/logo--.png" alt=""> </div>
@@ -48,7 +48,7 @@
             <img src="./images/contact-arrow.svg" alt="">
         </div>
     </section>
-    <section class="about">
+    <section id="aboutToScroll" class="about">
         <img src="./images/about-image.svg" alt="">
         <div class="container">
             <div class="main-spec">
@@ -81,7 +81,7 @@
             </div>
         </div>
     </section>
-    <section class="services">
+    <section id="servicesToScroll" class="services">
         <div class="container">
 
             <div class="tab">
@@ -225,7 +225,72 @@
             </div>
         </div>
     </section>
-    <section class="price">
+    <section id="galleryToScroll" class="gallery">
+        <div class="name-gallery">
+            <h3>Galeria</h3>
+            <hr>
+        </div>
+        <div class="container gallery-elements">
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
+            </div>
+            <div class="gallery-image">
+                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <section id="priceToScroll" class="price">
         <div class="container">
             <h5 class="title-price">Cenniki</h5>
             <hr>
@@ -320,72 +385,7 @@
 
             </div>
     </section>
-    <section class="gallery">
-        <div class="name-gallery">
-            <h3>Galeria</h3>
-            <hr>
-        </div>
-        <div class="container gallery-elements">
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/1.jpg" data-lightbox="gallery"> <img src="./images/gallery/1.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/2.jpg" data-lightbox="gallery"><img src="./images/gallery/2.jpg" alt=""></a>
-            </div>
-            <div class="gallery-image">
-                <a href="images/gallery/3.jpg" data-lightbox="gallery"><img src="./images/gallery/3.jpg" alt=""></a>
-            </div>
-        </div>
-    </section>
-    <section class="contact">
+    <section id="contactToScroll" class="contact">
         <div class="container contact-container">
             <div class="contact-form">
                 <h3 class="main-header">Kontakt</h3>

@@ -52,24 +52,58 @@ autoClick();
 
 /************* NAV SCROLL AND ANIMATE *****************/
 
-// $('#jumbotron').on('click', function () {
-//     $('body, html').animate({
-//         scrollTop: $('.about').offset().top
-//     })
-// })
+function newSelector(liElement) {
 
-
-function displayDate() {
-    window.scroll({
-        top: 1000,
-        left: 0,
-        behavior: 'smooth'
-    })
+    document.querySelector(`.${liElement}`).onclick = function () {
+        this.classList.add("active")
+        scrollFunction(`${liElement}`);
+    }
 }
 
-function scrollFunction() {
-    document.querySelector('.about').scrollIntoView({
+function scrollFunction(sectionElement) {
+    document.querySelector(`#${sectionElement}`).scrollIntoView({
         behavior: 'smooth'
     });
 }
-document.querySelector('#about').addEventListener("click", scrollFunction)
+
+var liElements = document.querySelectorAll("nav li");
+var arrayScrollElements = [];
+for (var i = 0; i < liElements.length; i++) {
+    var arrayScrollElement = liElements[i].className;
+    arrayScrollElements.push(arrayScrollElement);
+}
+arrayScrollElements.forEach(newSelector);
+
+function addActive() {
+    var halfWindowHeight = window.outerHeight / 2;
+
+    const hightScroll = window.scrollY;
+    const hightJumbotron = document.querySelector("#jumbotronToScroll").offsetTop;
+    const hightAbout = document.querySelector("#aboutToScroll").offsetTop - halfWindowHeight;
+    const hightServices = document.querySelector("#servicesToScroll").offsetTop - halfWindowHeight;
+    const hightGallery = document.querySelector("#galleryToScroll").offsetTop - halfWindowHeight;
+    const hightPrice = document.querySelector("#priceToScroll").offsetTop - halfWindowHeight;
+    const hightContact = document.querySelector("#contactToScroll").offsetTop - halfWindowHeight;
+
+    for (var i = 0; i < liElements.length; i++) {
+        liElements[i].classList.remove("active");
+
+    }
+
+
+    if (hightScroll < hightAbout) {
+        document.querySelector(".jumbotronToScroll").classList.add("active")
+    } else if (hightScroll >= hightAbout && hightScroll < hightServices)
+        document.querySelector(".aboutToScroll").classList.add("active")
+    else if (hightScroll >= hightServices && hightScroll < hightGallery)
+        document.querySelector(".servicesToScroll").classList.add("active")
+    else if (hightScroll >= hightGallery && hightScroll < hightPrice)
+        document.querySelector(".galleryToScroll").classList.add("active")
+    else if (hightScroll >= hightPrice && hightScroll < hightContact)
+        document.querySelector(".priceToScroll").classList.add("active")
+    else
+        document.querySelector(".contactToScroll").classList.add("active")
+}
+
+
+window.addEventListener("scroll", addActive);

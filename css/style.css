@@ -70,6 +70,10 @@ nav ul li:hover:before {
   opacity: 1;
 }
 
+nav ul li.active:before {
+  opacity: 1;
+}
+
 nav .fa-chevron-up:before {
   text-align: center;
 }
