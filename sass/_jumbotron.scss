@@ -4,9 +4,23 @@
     //position: relative;
 
     .main-logo {
+        padding-top: 2vw;
         width: 17vw;
         //object-fit: cover;
         margin-left: 3vw;
+        position: relative;
+
+        .logo-part-one {
+            width: 16vw;
+            opacity: 0.2;
+        }
+
+        .logo-part-two {
+            width: 17vw;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .owl-carousel {

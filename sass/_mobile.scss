@@ -1,0 +1,26 @@
+@media (max-width: 783px) {
+
+    nav {
+        width: 70vw;
+        right: -70vw;
+        transition: .5s;
+    }
+
+    .burger {
+        display: block;
+        right: 0;
+        font-size: 45px;
+        margin-right: 10px;
+        transition: .5s;
+        z-index: 2;
+
+        &.active {
+            right: 70vw;
+
+            +nav {
+                right: 0;
+            }
+        }
+
+    }
+}

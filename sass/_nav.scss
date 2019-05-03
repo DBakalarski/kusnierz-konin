@@ -1,3 +1,8 @@
+.burger {
+    position: fixed;
+    display: none;
+}
+
 nav {
     width: 220px;
     height: 100vh;
@@ -56,7 +61,8 @@ nav {
         text-align: center;
     }
 
-    span {
+    .back-to-top {
+        cursor: pointer;
         text-align: center;
         display: flex;
         flex-direction: column;

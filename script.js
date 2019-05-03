@@ -105,5 +105,16 @@ function addActive() {
         document.querySelector(".contactToScroll").classList.add("active")
 }
 
+document.querySelector(".back-to-top").onclick = function () {
+    scrollFunction("jumbotronToScroll");
+}
 
 window.addEventListener("scroll", addActive);
+
+/********* HAMBURGER MENU *************/
+
+const burger = document.querySelector('.burger');
+
+burger.onclick = function () {
+    burger.classList.toggle("active");
+}

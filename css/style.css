@@ -7,7 +7,6 @@
 
 body {
   font-family: 'Hind';
-  height: 300vh;
 }
 
 .container {
@@ -16,6 +15,11 @@ body {
 }
 
 /* VARIABLES */
+.burger {
+  position: fixed;
+  display: none;
+}
+
 nav {
   width: 220px;
   height: 100vh;
@@ -78,7 +82,8 @@ nav .fa-chevron-up:before {
   text-align: center;
 }
 
-nav span {
+nav .back-to-top {
+  cursor: pointer;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,8 +105,22 @@ nav span {
 }
 
 .jumbotron .main-logo {
+  padding-top: 2vw;
   width: 17vw;
   margin-left: 3vw;
+  position: relative;
+}
+
+.jumbotron .main-logo .logo-part-one {
+  width: 16vw;
+  opacity: 0.2;
+}
+
+.jumbotron .main-logo .logo-part-two {
+  width: 17vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .jumbotron .owl-carousel {
@@ -545,7 +564,6 @@ nav span {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid red;
 }
 
 .gallery .name-gallery {
@@ -748,10 +766,6 @@ nav span {
   font-size: 20px;
 }
 
-.contact .contact-details img {
-  width: 100px;
-}
-
 .contact .contact-image {
   position: absolute;
   left: 50%;
@@ -760,5 +774,29 @@ nav span {
   padding-right: 220px;
   top: 46%;
   width: 50vw;
+}
+
+@media (max-width: 783px) {
+  nav {
+    width: 70vw;
+    right: -70vw;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .burger {
+    display: block;
+    right: 0;
+    font-size: 45px;
+    margin-right: 10px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    z-index: 2;
+  }
+  .burger.active {
+    right: 70vw;
+  }
+  .burger.active + nav {
+    right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
