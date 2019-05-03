@@ -112,15 +112,13 @@ nav .back-to-top {
 }
 
 .jumbotron .main-logo .logo-part-one {
-  width: 16vw;
   opacity: 0.2;
 }
 
 .jumbotron .main-logo .logo-part-two {
-  width: 17vw;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0.5vw;
 }
 
 .jumbotron .owl-carousel {
@@ -334,7 +332,6 @@ nav .back-to-top {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  border: 1px solid green;
 }
 
 .services .tab .tablinks {
@@ -422,7 +419,6 @@ nav .back-to-top {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
 }
 
 .tab-services-content .tabcontent .main-service {
@@ -782,6 +778,7 @@ nav .back-to-top {
     right: -70vw;
     -webkit-transition: .5s;
     transition: .5s;
+    z-index: 2;
   }
   .burger {
     display: block;
@@ -790,13 +787,193 @@ nav .back-to-top {
     margin-right: 10px;
     -webkit-transition: .5s;
     transition: .5s;
-    z-index: 2;
+    z-index: 3;
+    top: -10px;
   }
   .burger.active {
-    right: 70vw;
+    color: white;
+    margin-right: 0;
+    right: calc(70vw/2);
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
   }
   .burger.active + nav {
     right: 0;
+  }
+  .jumbotron {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .jumbotron .main-logo {
+    position: relative;
+    width: 50vw;
+  }
+  .jumbotron .owl-carousel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 45vw;
+  }
+  .jumbotron .main-contact {
+    position: relative;
+    bottom: 0;
+    width: 80vw;
+  }
+  .jumbotron .main-contact h3 {
+    font-size: 8.2vw;
+  }
+  .jumbotron .main-contact h4 {
+    font-size: 6.8vw;
+  }
+  .about {
+    padding: 0;
+  }
+  .about img {
+    width: 100vw;
+    left: 50%;
+  }
+  .about h5 {
+    font-size: 8vw;
+  }
+  .about .main-text {
+    font-size: 5vw;
+  }
+  .about .description {
+    width: 95vw;
+    margin: 0 auto;
+  }
+  .about .description br {
+    display: none;
+  }
+  .services {
+    height: auto;
+    padding-right: 0;
+    padding-top: 10px;
+  }
+  .services hr {
+    display: none;
+  }
+  .services .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services .tab {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+  .services .tab .tablinks.active img {
+    display: none;
+  }
+  .services .tab h2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .services .tab .tablinks-text {
+    padding-right: 10px;
+    font-size: 5vw;
+  }
+  .services .tab-services-content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .gallery {
+    padding-right: 0;
+    height: auto;
+  }
+  .gallery .gallery-elements .gallery-image {
+    width: 33vw;
+  }
+  .gallery .gallery-elements .gallery-image img {
+    width: 33vw;
+    height: 33vw;
+    padding: 0;
+  }
+  .price {
+    height: auto;
+    padding-right: 0;
+    margin-top: 18px;
+  }
+  .price .tab-price .tab-links {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .price .tab-price .tab-links .tablink-price {
+    margin: 5px;
+    padding: 5px 10px;
+  }
+  .price .tabcontent-price .main-service-price-desc {
+    text-align: center;
+  }
+  .price .tabcontent-price .single-price {
+    width: 70vw;
+    margin-left: 18px;
+  }
+  .price .tabcontent-price .single-price .single-price-desc {
+    text-align: center;
+  }
+  .price .tabcontent-price .single-price .single-price-price {
+    padding-left: 10px;
+    width: 153px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact {
+    height: auto;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+  .contact .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-form {
+    width: 100vw;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .contact .contact-form form input,
+  .contact .contact-form form textarea {
+    width: 80vw;
+  }
+  .contact .contact-form form input:focus ~ .bar:before,
+  .contact .contact-form form textarea:focus ~ .bar:before {
+    width: 80vw;
+  }
+  .contact .contact-details {
+    margin-bottom: 10px;
+  }
+  .contact .contact-details img {
+    width: 80vw;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,8 @@
         width: 70vw;
         right: -70vw;
         transition: .5s;
+        z-index: 2;
+
     }
 
     .burger {
@@ -12,10 +14,14 @@
         font-size: 45px;
         margin-right: 10px;
         transition: .5s;
-        z-index: 2;
+        z-index: 3;
+        top: -10px;
 
         &.active {
-            right: 70vw;
+            color: white;
+            margin-right: 0;
+            right: calc(70vw/2);
+            transform: translate(50%, 0);
 
             +nav {
                 right: 0;
@@ -23,4 +29,196 @@
         }
 
     }
+
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .main-logo {
+            position: relative;
+            width: 50vw;
+        }
+
+        .owl-carousel {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 80vw;
+            height: 45vw;
+        }
+
+        .main-contact {
+            position: relative;
+            bottom: 0;
+            width: 80vw;
+
+            h3 {
+                font-size: 8.2vw;
+            }
+
+            h4 {
+                font-size: 6.8vw;
+            }
+        }
+    }
+
+    .about {
+        padding: 0;
+
+        img {
+            width: 100vw;
+            left: 50%;
+        }
+
+        h5 {
+            font-size: 8vw;
+        }
+
+        .main-text {
+            font-size: 5vw;
+        }
+
+        .description {
+            width: 95vw;
+            margin: 0 auto;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .services {
+        height: auto;
+        padding-right: 0;
+        padding-top: 10px;
+
+        hr {
+            display: none;
+        }
+
+        .container {
+            flex-direction: column;
+        }
+
+        .tab {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .tablinks.active img {
+                display: none;
+            }
+
+            h2 {
+                flex-basis: 100%;
+            }
+
+            .tablinks-text {
+                padding-right: 10px;
+                font-size: 5vw;
+            }
+        }
+
+        .tab-services-content {
+            order: 2;
+        }
+    }
+
+    .gallery {
+        padding-right: 0;
+        height: auto;
+
+        .gallery-elements {
+            .gallery-image {
+                width: 33vw;
+
+                img {
+                    width: 33vw;
+                    height: 33vw;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .price {
+        height: auto;
+        padding-right: 0;
+        margin-top: 18px;
+
+        .tab-price {
+            .tab-links {
+                flex-wrap: wrap;
+
+                .tablink-price {
+                    margin: 5px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        .tabcontent-price {
+            .main-service-price-desc {
+                text-align: center;
+            }
+
+            .single-price {
+                width: 70vw;
+                margin-left: 18px;
+
+                .single-price-desc {
+                    text-align: center;
+                }
+
+                .single-price-price {
+                    padding-left: 10px;
+                    width: 153px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .contact {
+        height: auto;
+        padding-right: 0;
+        margin-top: 20px;
+
+        .contact-container {
+            flex-direction: column;
+        }
+
+        .contact-form {
+            width: 100vw;
+            order: 2;
+
+            form {
+
+                input,
+                textarea {
+                    width: 80vw;
+
+                    &:focus~.bar:before {
+                        width: 80vw;
+                    }
+                }
+
+            }
+        }
+
+        .contact-details {
+            margin-bottom: 10px;
+
+            img {
+                width: 80vw;
+                margin: 0 auto;
+            }
+        }
+    }
+
 }
