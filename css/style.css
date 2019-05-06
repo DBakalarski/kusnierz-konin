@@ -14,10 +14,78 @@ body {
   margin: 0 auto;
 }
 
-/* VARIABLES */
 .burger {
   position: fixed;
   display: none;
+}
+
+.burger {
+  width: 42px;
+  height: 31.5px;
+  position: fixed;
+  margin: 30px auto;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.burger span {
+  display: block;
+  position: fixed;
+  height: 6.3px;
+  width: 100%;
+  background: #2c2626;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.burger.white span {
+  background: #D7D6D6;
+}
+
+.burger.active span {
+  background: #D7D6D6;
+}
+
+.burger span:nth-child(1) {
+  top: 0px;
+}
+
+.burger span:nth-child(2),
+.burger span:nth-child(3) {
+  top: 18px;
+}
+
+.burger span:nth-child(4) {
+  top: 36px;
+}
+
+.burger.active span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.burger.active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.burger.active span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 nav {
@@ -780,22 +848,15 @@ nav .back-to-top {
     transition: .5s;
     z-index: 2;
   }
+  nav .back-to-top {
+    padding-bottom: 10px;
+  }
   .burger {
     display: block;
     right: 0;
-    font-size: 45px;
     margin-right: 10px;
-    -webkit-transition: .5s;
-    transition: .5s;
     z-index: 3;
     top: -10px;
-  }
-  .burger.active {
-    color: white;
-    margin-right: 0;
-    right: calc(70vw/2);
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
   }
   .burger.active + nav {
     right: 0;

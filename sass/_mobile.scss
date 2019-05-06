@@ -6,22 +6,24 @@
         transition: .5s;
         z-index: 2;
 
+        .back-to-top {
+            padding-bottom: 10px;
+        }
+
     }
 
     .burger {
         display: block;
         right: 0;
-        font-size: 45px;
+        //font-size: 45px;
         margin-right: 10px;
-        transition: .5s;
+        //transition: .5s;
         z-index: 3;
         top: -10px;
 
         &.active {
-            color: white;
-            margin-right: 0;
-            right: calc(70vw/2);
-            transform: translate(50%, 0);
+            //right: calc(70vw/2);
+            //transform: translate(50%, 0);
 
             +nav {
                 right: 0;

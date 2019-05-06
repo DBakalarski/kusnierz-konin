@@ -55,7 +55,9 @@ autoClick();
 function newSelector(liElement) {
 
     document.querySelector(`.${liElement}`).onclick = function () {
-        this.classList.add("active")
+        this.classList.add("active");
+        burger.classList.toggle("active");
+
         scrollFunction(`${liElement}`);
     }
 }
@@ -117,4 +119,26 @@ const burger = document.querySelector('.burger');
 
 burger.onclick = function () {
     burger.classList.toggle("active");
+}
+
+function changeBurgerColor() {
+    burger.classList.remove("white");
+    if ((window.scrollY > document.querySelector("#aboutToScroll").offsetTop) &&
+        (window.scrollY < document.querySelector("#servicesToScroll").offsetTop)) {
+        burger.classList.add("white");
+    }
+}
+window.addEventListener("scroll", changeBurgerColor);
+
+/****** HIDE HAMBURGER *******/
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        burger.style.top = "0";
+    } else {
+        burger.style.top = "-75px";
+    }
+    prevScrollpos = currentScrollPos;
 }
