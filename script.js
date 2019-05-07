@@ -50,7 +50,20 @@ function autoClick() {
 
 autoClick();
 
+
+
 /************* NAV SCROLL AND ANIMATE *****************/
+const halfWindowHeight = window.outerHeight / 2;
+
+const hightJumbotron = document.querySelector("#jumbotronToScroll").offsetTop;
+const hightAbout = document.querySelector("#aboutToScroll").offsetTop - halfWindowHeight;
+const hightServices = document.querySelector("#servicesToScroll").offsetTop - halfWindowHeight;
+const hightGallery = document.querySelector("#galleryToScroll").offsetTop - halfWindowHeight;
+const hightPrice = document.querySelector("#priceToScroll").offsetTop - halfWindowHeight;
+const hightContact = document.querySelector("#contactToScroll").offsetTop - halfWindowHeight;
+
+var liElements = document.querySelectorAll("nav li");
+var arrayScrollElements = [];
 
 function newSelector(liElement) {
 
@@ -68,8 +81,6 @@ function scrollFunction(sectionElement) {
     });
 }
 
-var liElements = document.querySelectorAll("nav li");
-var arrayScrollElements = [];
 for (var i = 0; i < liElements.length; i++) {
     var arrayScrollElement = liElements[i].className;
     arrayScrollElements.push(arrayScrollElement);
@@ -77,21 +88,12 @@ for (var i = 0; i < liElements.length; i++) {
 arrayScrollElements.forEach(newSelector);
 
 function addActive() {
-    var halfWindowHeight = window.outerHeight / 2;
-
     const hightScroll = window.scrollY;
-    const hightJumbotron = document.querySelector("#jumbotronToScroll").offsetTop;
-    const hightAbout = document.querySelector("#aboutToScroll").offsetTop - halfWindowHeight;
-    const hightServices = document.querySelector("#servicesToScroll").offsetTop - halfWindowHeight;
-    const hightGallery = document.querySelector("#galleryToScroll").offsetTop - halfWindowHeight;
-    const hightPrice = document.querySelector("#priceToScroll").offsetTop - halfWindowHeight;
-    const hightContact = document.querySelector("#contactToScroll").offsetTop - halfWindowHeight;
 
     for (var i = 0; i < liElements.length; i++) {
         liElements[i].classList.remove("active");
 
     }
-
 
     if (hightScroll < hightAbout) {
         document.querySelector(".jumbotronToScroll").classList.add("active")
@@ -107,11 +109,10 @@ function addActive() {
         document.querySelector(".contactToScroll").classList.add("active")
 }
 
-document.querySelector(".back-to-top").onclick = function () {
-    scrollFunction("jumbotronToScroll");
-}
+// document.querySelector(".back-to-top").onclick = function () {
+//     scrollFunction("jumbotronToScroll");
+// }
 
-window.addEventListener("scroll", addActive);
 
 /********* HAMBURGER MENU *************/
 
@@ -128,17 +129,26 @@ function changeBurgerColor() {
         burger.classList.add("white");
     }
 }
-window.addEventListener("scroll", changeBurgerColor);
 
 /****** HIDE HAMBURGER *******/
+let prevScrollpos = window.pageYOffset;
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+function hideHamburger() {
+
+    const currentScrollPos = window.pageYOffset;
+    if ((prevScrollpos > currentScrollPos) || (currentScrollPos <= document.querySelector("#aboutToScroll").offsetTop)) {
         burger.style.top = "0";
     } else {
         burger.style.top = "-75px";
     }
     prevScrollpos = currentScrollPos;
 }
+
+/******* RUN WITH SCROLL *******/
+function activeWithScroll() {
+    addActive();
+    changeBurgerColor();
+    hideHamburger();
+}
+
+window.addEventListener("scroll", activeWithScroll);

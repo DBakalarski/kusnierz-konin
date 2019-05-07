@@ -69,6 +69,11 @@
     .about {
         padding: 0;
 
+        hr {
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+
         img {
             width: 100vw;
             left: 50%;
@@ -169,8 +174,9 @@
             }
 
             .single-price {
-                width: 70vw;
+                width: 80vw;
                 margin-left: 18px;
+                font-size: 12px;
 
                 .single-price-desc {
                     text-align: center;
@@ -178,7 +184,7 @@
 
                 .single-price-price {
                     padding-left: 10px;
-                    width: 153px;
+                    width: 89px;
                     display: flex;
                     align-items: center;
                 }
@@ -190,6 +196,7 @@
         height: auto;
         padding-right: 0;
         margin-top: 20px;
+        padding-bottom: 10px;
 
         .contact-container {
             flex-direction: column;
@@ -200,6 +207,9 @@
             order: 2;
 
             form {
+                .group {
+                    margin: 10px 0;
+                }
 
                 input,
                 textarea {

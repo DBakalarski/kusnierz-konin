@@ -14,6 +14,11 @@ body {
   margin: 0 auto;
 }
 
+a[href^=tel] {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .burger {
   position: fixed;
   display: none;
@@ -900,6 +905,10 @@ nav .back-to-top {
   .about {
     padding: 0;
   }
+  .about hr {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
   .about img {
     width: 100vw;
     left: 50%;
@@ -988,15 +997,16 @@ nav .back-to-top {
     text-align: center;
   }
   .price .tabcontent-price .single-price {
-    width: 70vw;
+    width: 80vw;
     margin-left: 18px;
+    font-size: 12px;
   }
   .price .tabcontent-price .single-price .single-price-desc {
     text-align: center;
   }
   .price .tabcontent-price .single-price .single-price-price {
     padding-left: 10px;
-    width: 153px;
+    width: 89px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1008,6 +1018,7 @@ nav .back-to-top {
     height: auto;
     padding-right: 0;
     margin-top: 20px;
+    padding-bottom: 10px;
   }
   .contact .contact-container {
     -webkit-box-orient: vertical;
@@ -1020,6 +1031,9 @@ nav .back-to-top {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .contact .contact-form form .group {
+    margin: 10px 0;
   }
   .contact .contact-form form input,
   .contact .contact-form form textarea {

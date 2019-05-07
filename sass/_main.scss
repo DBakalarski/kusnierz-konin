@@ -17,3 +17,8 @@ body {
     max-width: 1330px;
     margin: 0 auto;
 }
+
+a[href^=tel] {
+    text-decoration: inherit;
+    color: inherit;
+}
