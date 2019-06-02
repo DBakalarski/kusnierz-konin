@@ -6,6 +6,15 @@
         transition: .5s;
         z-index: 2;
 
+        ul {
+            padding-top: 10px;
+
+            li {
+                line-height: 35px;
+                font-size: 18px;
+            }
+        }
+
         .back-to-top {
             padding-bottom: 10px;
         }
@@ -13,20 +22,49 @@
     }
 
     .burger {
-        display: block;
+        display: flex;
+        align-items: center;
         right: 0;
-        //font-size: 45px;
         margin-right: 10px;
-        //transition: .5s;
         z-index: 3;
-        top: -10px;
+        top: 10px;
+        height: 43px;
+
+        .burger-name {
+            margin-right: 15px;
+            font-size: 21px;
+            transition: .4s;
+        }
+
+        .burger-icon {
+            font-size: 32px;
+            transition: .4s;
+
+            .fa-times {
+                display: none;
+            }
+        }
 
         &.active {
-            //right: calc(70vw/2);
-            //transform: translate(50%, 0);
-
             +nav {
                 right: 0;
+            }
+
+            .burger-name {
+                color: $font-color-light;
+            }
+
+            .burger-icon {
+                color: $font-color-light;
+
+                .fa-bars {
+                    display: none;
+                }
+
+                .fa-times {
+                    display: block;
+
+                }
             }
         }
 
@@ -116,8 +154,19 @@
             justify-content: center;
             margin-bottom: 10px;
 
-            .tablinks.active img {
-                display: none;
+            .tablinks {
+                width: calc(50% - 10px);
+                border: 1px solid;
+                border-radius: 5px;
+                margin: 5px;
+            }
+
+            .tablinks.active {
+                border: 2px solid;
+
+                img {
+                    display: none;
+                }
             }
 
             h2 {
@@ -125,7 +174,6 @@
             }
 
             .tablinks-text {
-                padding-right: 10px;
                 font-size: 5vw;
             }
         }

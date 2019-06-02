@@ -134,12 +134,11 @@ function changeBurgerColor() {
 let prevScrollpos = window.pageYOffset;
 
 function hideHamburger() {
-
     const currentScrollPos = window.pageYOffset;
     if ((prevScrollpos > currentScrollPos) || (currentScrollPos <= document.querySelector("#aboutToScroll").offsetTop)) {
-        burger.style.top = "0";
+        burger.style.opacity = "1";
     } else {
-        burger.style.top = "-75px";
+        burger.style.opacity = "0.5";
     }
     prevScrollpos = currentScrollPos;
 }
@@ -152,3 +151,18 @@ function activeWithScroll() {
 }
 
 window.addEventListener("scroll", activeWithScroll);
+
+
+/********* SERVICES SCROLL *************/
+
+var servicesElements = document.querySelectorAll(".tablinks");
+
+for (var i = 0; i < servicesElements.length; i++) {
+    let toScrollServicesElement = document.querySelector(".tab-services-content");
+    servicesElements[i].addEventListener("click", function () {
+        toScrollServicesElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    })
+}
