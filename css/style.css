@@ -900,7 +900,7 @@ nav .back-to-top {
   .services {
     height: auto;
     padding-right: 0;
-    padding-top: 10px;
+    padding-top: 20px;
   }
   .services hr {
     display: none;
@@ -925,12 +925,18 @@ nav .back-to-top {
   }
   .services .tab .tablinks {
     width: calc(50% - 10px);
-    border: 1px solid;
+    border: 1px solid #282121;
     border-radius: 5px;
-    margin: 5px;
+    margin: 3px;
+    height: auto;
+    min-height: 30px;
+    padding: 5px 0;
+    font-weight: 600;
   }
   .services .tab .tablinks.active {
-    border: 2px solid;
+    border: 2px solid #282121;
+    background-color: #282121;
+    color: #fff;
   }
   .services .tab .tablinks.active img {
     display: none;
@@ -938,6 +944,8 @@ nav .back-to-top {
   .services .tab h2 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    font-size: 33px;
+    margin-bottom: 5px;
   }
   .services .tab .tablinks-text {
     font-size: 5vw;
@@ -950,6 +958,11 @@ nav .back-to-top {
   .gallery {
     padding-right: 0;
     height: auto;
+    padding-top: 15px;
+  }
+  .gallery hr {
+    position: relative;
+    top: -17px;
   }
   .gallery .gallery-elements .gallery-image {
     width: 33vw;
@@ -964,6 +977,14 @@ nav .back-to-top {
     padding-right: 0;
     margin-top: 18px;
   }
+  .price .price-separator {
+    margin: 15px auto;
+  }
+  .price hr {
+    position: relative;
+    top: -5px;
+    width: 30%;
+  }
   .price .tab-price .tab-links {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -971,6 +992,11 @@ nav .back-to-top {
   .price .tab-price .tab-links .tablink-price {
     margin: 5px;
     padding: 5px 10px;
+    width: 70%;
+    text-align: center;
+    font-size: 5vw;
+    border-radius: 3px;
+    font-weight: 600;
   }
   .price .tabcontent-price .main-service-price-desc {
     text-align: center;
@@ -982,6 +1008,7 @@ nav .back-to-top {
   }
   .price .tabcontent-price .single-price .single-price-desc {
     text-align: center;
+    font-weight: 600;
   }
   .price .tabcontent-price .single-price .single-price-price {
     padding-left: 10px;

@@ -138,7 +138,7 @@
     .services {
         height: auto;
         padding-right: 0;
-        padding-top: 10px;
+        padding-top: 20px;
 
         hr {
             display: none;
@@ -156,13 +156,19 @@
 
             .tablinks {
                 width: calc(50% - 10px);
-                border: 1px solid;
+                border: 1px solid $font-color-dark;
                 border-radius: 5px;
-                margin: 5px;
+                margin: 3px;
+                height: auto;
+                min-height: 30px;
+                padding: 5px 0;
+                font-weight: 600;
             }
 
             .tablinks.active {
-                border: 2px solid;
+                border: 2px solid $font-color-dark;
+                background-color: $font-color-dark;
+                color: #fff;
 
                 img {
                     display: none;
@@ -171,6 +177,8 @@
 
             h2 {
                 flex-basis: 100%;
+                font-size: 33px;
+                margin-bottom: 5px;
             }
 
             .tablinks-text {
@@ -186,6 +194,12 @@
     .gallery {
         padding-right: 0;
         height: auto;
+        padding-top: 15px;
+
+        hr {
+            position: relative;
+            top: -17px;
+        }
 
         .gallery-elements {
             .gallery-image {
@@ -205,6 +219,16 @@
         padding-right: 0;
         margin-top: 18px;
 
+        .price-separator {
+            margin: 15px auto;
+        }
+
+        hr {
+            position: relative;
+            top: -5px;
+            width: 30%;
+        }
+
         .tab-price {
             .tab-links {
                 flex-wrap: wrap;
@@ -212,6 +236,11 @@
                 .tablink-price {
                     margin: 5px;
                     padding: 5px 10px;
+                    width: 70%;
+                    text-align: center;
+                    font-size: 5vw;
+                    border-radius: 3px;
+                    font-weight: 600;
                 }
             }
         }
@@ -228,6 +257,7 @@
 
                 .single-price-desc {
                     text-align: center;
+                    font-weight: 600;
                 }
 
                 .single-price-price {
