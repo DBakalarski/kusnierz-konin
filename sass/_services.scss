@@ -24,6 +24,11 @@
             cursor: pointer;
             height: 30px;
 
+            &:hover p {
+                font-weight: bold;
+                ;
+            }
+
             &:first-child {
                 margin-top: 30px;
             }

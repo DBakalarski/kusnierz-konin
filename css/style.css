@@ -127,7 +127,7 @@ nav .back-to-top {
 }
 
 .jumbotron .owl-carousel {
-  width: 40vw;
+  width: 49vw;
   height: 28vw;
   border: 5px solid brown;
   overflow: hidden;
@@ -139,7 +139,6 @@ nav .back-to-top {
 .jumbotron .owl-carousel img {
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 10px;
 }
 
 .jumbotron .main-contact {
@@ -351,6 +350,10 @@ nav .back-to-top {
           justify-content: center;
   cursor: pointer;
   height: 30px;
+}
+
+.services .tab .tablinks:hover p {
+  font-weight: bold;
 }
 
 .services .tab .tablinks:first-child {
@@ -781,8 +784,8 @@ nav .back-to-top {
   nav {
     width: 70vw;
     right: -70vw;
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     z-index: 2;
   }
   nav ul {
@@ -803,10 +806,14 @@ nav .back-to-top {
         -ms-flex-align: center;
             align-items: center;
     right: 0;
-    margin-right: 10px;
     z-index: 3;
-    top: 10px;
     height: 43px;
+    padding: 4px 10px 0px;
+  }
+  .burger.bottom {
+    background: rgba(225, 225, 225, 0.8);
+    border: 1px solid black;
+    border-radius: 4px;
   }
   .burger .burger-name {
     margin-right: 15px;
@@ -821,6 +828,10 @@ nav .back-to-top {
   }
   .burger .burger-icon .fa-times {
     display: none;
+  }
+  .burger.active {
+    background: none;
+    border: none;
   }
   .burger.active + nav {
     right: 0;
@@ -1055,6 +1066,12 @@ nav .back-to-top {
   .contact .contact-details img {
     width: 80vw;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  nav ul li {
+    line-height: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

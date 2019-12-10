@@ -124,9 +124,13 @@ burger.onclick = function () {
 
 function changeBurgerColor() {
     burger.classList.remove("white");
+    burger.classList.remove("bottom");
     if ((window.scrollY > document.querySelector("#aboutToScroll").offsetTop) &&
         (window.scrollY < document.querySelector("#servicesToScroll").offsetTop)) {
         burger.classList.add("white");
+    }
+    if ((window.scrollY > document.querySelector("#aboutToScroll").offsetTop)) {
+        burger.classList.add("bottom");
     }
 }
 
@@ -138,7 +142,7 @@ function hideHamburger() {
     if ((prevScrollpos > currentScrollPos) || (currentScrollPos <= document.querySelector("#aboutToScroll").offsetTop)) {
         burger.style.opacity = "1";
     } else {
-        burger.style.opacity = "0.5";
+        burger.style.opacity = "0.3";
     }
     prevScrollpos = currentScrollPos;
 }

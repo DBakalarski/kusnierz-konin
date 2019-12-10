@@ -3,7 +3,9 @@
     nav {
         width: 70vw;
         right: -70vw;
-        transition: .5s;
+        //transition: .5s;
+        //transition-timing-function: ease-in;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
         z-index: 2;
 
         ul {
@@ -25,10 +27,17 @@
         display: flex;
         align-items: center;
         right: 0;
-        margin-right: 10px;
+        //margin-right: 10px;
         z-index: 3;
-        top: 10px;
+        //top: 10px;
         height: 43px;
+        padding: 4px 10px 0px;
+
+        &.bottom {
+            background: rgba(225, 225, 225, 0.8);
+            border: 1px solid black;
+            border-radius: 4px;
+        }
 
         .burger-name {
             margin-right: 15px;
@@ -46,6 +55,9 @@
         }
 
         &.active {
+            background: none;
+            border: none;
+
             +nav {
                 right: 0;
             }
