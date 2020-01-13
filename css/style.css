@@ -127,13 +127,19 @@ nav .back-to-top {
 }
 
 .jumbotron .owl-carousel {
-  width: 49vw;
-  height: 28vw;
-  border: 5px solid brown;
-  overflow: hidden;
+  width: 55vw;
+  height: 30vw;
   position: absolute;
   bottom: 10vh;
-  right: 300px;
+  right: 260px;
+}
+
+.jumbotron .owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .jumbotron .owl-carousel img {

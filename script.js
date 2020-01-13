@@ -4,8 +4,18 @@ $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
 });
 $('.owl-carousel').owlCarousel({
-    items: 1
+    items: 1,
+    loop: true,
+    //slideTransition: "linear"
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    //nav: true
+    //     dots: true,
+    //     dotsEach: true
 })
+
+
 
 /* TAB SERVICES */
 
@@ -109,9 +119,9 @@ function addActive() {
         document.querySelector(".contactToScroll").classList.add("active")
 }
 
-// document.querySelector(".back-to-top").onclick = function () {
-//     scrollFunction("jumbotronToScroll");
-// }
+document.querySelector(".back-to-top").onclick = function () {
+    scrollFunction("jumbotronToScroll");
+}
 
 
 /********* HAMBURGER MENU *************/
