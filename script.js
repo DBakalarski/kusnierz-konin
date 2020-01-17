@@ -8,7 +8,7 @@ $('.owl-carousel').owlCarousel({
     loop: true,
     //slideTransition: "linear"
     autoplay: true,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     //nav: true
     //     dots: true,
