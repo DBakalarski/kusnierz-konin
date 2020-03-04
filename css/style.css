@@ -32,7 +32,7 @@ nav {
   top: 0;
   background-color: #2c2626;
   color: #D7D6D6;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav img {
@@ -132,6 +132,11 @@ nav .back-to-top {
   position: absolute;
   bottom: 10vh;
   right: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 220px);
+  height: 100vh;
 }
 
 .jumbotron .owl-carousel .owl-dots {
@@ -272,6 +277,7 @@ nav .back-to-top {
   overflow: hidden;
   text-align: center;
   color: #D7D6D6;
+  z-index: 1;
 }
 
 .about .container {
@@ -320,6 +326,8 @@ nav .back-to-top {
   height: 100vh;
   background-color: #e9eff1;
   background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .services .container {
@@ -448,6 +456,8 @@ nav .back-to-top {
   background-color: #fff;
   color: #282121;
   counter-reset: price;
+  position: relative;
+  z-index: 1;
 }
 
 .price hr {
@@ -574,6 +584,9 @@ nav .back-to-top {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .gallery .name-gallery {
@@ -626,6 +639,7 @@ nav .back-to-top {
   overflow: hidden;
   position: relative;
   padding-top: 20px;
+  z-index: 1;
 }
 
 .contact .contact-container {

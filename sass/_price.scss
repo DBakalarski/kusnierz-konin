@@ -4,6 +4,8 @@
     background-color: #fff;
     color: $font-color-dark;
     counter-reset: price;
+    position: relative;
+    z-index: 1;
 
     hr {
         width: 5%;
