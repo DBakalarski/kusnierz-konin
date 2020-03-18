@@ -183,9 +183,9 @@ for (var i = 0; i < servicesElements.length; i++) {
 
 /********* a href *************/
 
-var servicesElements = document.querySelectorAll(".tablinks");
+// var servicesElements = document.querySelectorAll(".tablinks");
 
-var a = document.querySelector(".lalala");
-a.addEventListener("click", function (e) {
-    e.preventDefault();
-})
+// var a = document.querySelector(".lalala");
+// a.addEventListener("click", function (e) {
+//     e.preventDefault();
+// })

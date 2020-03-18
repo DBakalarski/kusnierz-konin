@@ -5,8 +5,28 @@
           box-sizing: border-box;
 }
 
+html {
+  font-family: sans-serif;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(100vh);
+      scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
 body {
   font-family: 'Hind';
+  overscroll-behavior: none;
+}
+
+.scroll-container {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 .container {
@@ -591,6 +611,7 @@ nav .back-to-top {
 
 .gallery .name-gallery {
   font-size: 40px;
+  padding-bottom: 12px;
 }
 
 .gallery hr {

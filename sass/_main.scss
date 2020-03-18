@@ -4,13 +4,35 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: sans-serif;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
 body {
     font-family: 'Hind';
+    overscroll-behavior: none;
     //font-family: 'Work Sans', sans-serif;
     //color: $font-color-dark;
     //font-family: 'Slabo 27px', serif;
     //font-family: 'Slabo 13px', serif;
     //height: 300vh;
+}
+
+.scroll-container {
+    //overflow-y: scroll;
+    scroll-snap-type: y proximity;
+
+}
+
+section {
+    //height: 100vh;
+    scroll-snap-align: start;
+    // scroll-snap-align: start none;
+    // scroll-snap-stop: normal;
+    // scroll-padding: 200px 0 0; //scroll-snap-type: proximity;
 }
 
 .container {
